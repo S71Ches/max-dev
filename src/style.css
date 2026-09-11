@@ -242,7 +242,7 @@ main {
   background: var(--glass-tint);
   border: 1px solid var(--glass-edge);
   border-radius: 42% 58% 63% 37% / 45% 38% 62% 55%;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow:
     0 30px 80px rgba(2, 8, 24, 0.55),
@@ -458,8 +458,4 @@ main h2 {
 
 .project-card-custom {
     margin-bottom: 30px;
-}
-
-.contact-item-custom:nth-child(2) {
-    margin-top: 100px;
 }
