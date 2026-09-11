@@ -1,4 +1,3 @@
-js
 import './style.css'
 import avatar from './assets/avatar.jpg'
 
@@ -95,4 +94,3 @@ document.querySelector('#app').innerHTML = `
     </section>
   </main>
 `
-
