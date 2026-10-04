@@ -459,3 +459,80 @@ main h2 {
 .project-card-custom {
     margin-bottom: 30px;
 }
+
+/* ---------- Language switcher (RU / EN) ---------- */
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: 8px;
+    padding: 3px;
+    border: 1px solid var(--glass-edge);
+    border-radius: 999px;
+    background: rgba(8, 22, 51, 0.45);
+}
+
+.lang-switch-btn {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    color: var(--ink-muted);
+    background: transparent;
+    border: 0;
+    border-radius: 999px;
+    padding: 7px 11px;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-switch-btn:hover {
+    color: var(--ink);
+    background: rgba(108, 92, 231, 0.22);
+}
+
+.lang-switch-btn:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 2px;
+}
+
+.lang-switch-btn.is-active {
+    color: var(--ink);
+    background: rgba(75, 214, 240, 0.18);
+    box-shadow: inset 0 0 0 1px rgba(75, 214, 240, 0.5);
+}
+
+@media (max-width: 900px) {
+    .lang-switch {
+        margin-left: 0;
+    }
+}
+
+/* ---------- Project card extras (Podarunok 777) ---------- */
+
+.project-badge-custom {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--cyan-soft);
+    background: rgba(75, 214, 240, 0.08);
+    border: 1px solid rgba(75, 214, 240, 0.3);
+    border-radius: 999px;
+}
+
+.project-links-custom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 900px) {
+    .project-links-custom {
+        justify-content: center;
+    }
+}
