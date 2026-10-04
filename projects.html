@@ -4,19 +4,21 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="64x64" href="/max-dev/favicon-small.png?v=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Проекты — MAX.DEV</title>
+  <title data-i18n="meta.title.projects">Проекты — MAX.DEV</title>
 
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin>
   <link href="https://googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" crossorigin href="/max-dev/assets/style-ChxzP3Sd.css">
+  <script type="module" crossorigin src="/max-dev/assets/projects-CjsME1dl.js"></script>
+  <link rel="modulepreload" crossorigin href="/max-dev/assets/i18n-Ch9Lx8N6.js">
+  <link rel="stylesheet" crossorigin href="/max-dev/assets/i18n-TRjMsUBE.css">
 </head>
 
 <body>
 <div id="app">
   <!-- Аватарка и маска -->
   <div class="avatar">
-    <img src="/max-dev/assets/avatar-5bgIPVnG.jpg" alt="Портрет Макса">
+    <img src="/max-dev/assets/avatar-5bgIPVnG.jpg" alt="Портрет Макса" data-i18n-alt="common.avatarAlt">
   </div>
   <div class="badge-mask" aria-hidden="true"></div>
 
@@ -24,9 +26,13 @@
   <header>
     <h1>MAX.DEV</h1>
     <nav>
-      <a href="index.html">Главная</a>
-      <a href="projects.html" class="active">Проекты</a>
-      <a href="contacts.html">Контакты</a>
+      <a href="index.html" data-i18n="nav.home">Главная</a>
+      <a href="projects.html" class="active" data-i18n="nav.projects">Проекты</a>
+      <a href="contacts.html" data-i18n="nav.contacts">Контакты</a>
+      <div class="lang-switch" role="group" aria-label="Выбор языка" data-i18n-aria-label="lang.label">
+        <button type="button" class="lang-switch-btn" data-lang-btn="ru" aria-pressed="true">RU</button>
+        <button type="button" class="lang-switch-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </header>
 
@@ -34,19 +40,39 @@
   <main>
     <section class="panel hero projects-page">
       <div class="main-content-text">
-        <h2>Мои проекты 🚀</h2>
-        <p class="lead-text">Здесь представлены мобильные приложения и веб-интерфейсы, которые я разрабатываю самостоятельно — от идеи и проектирования интерфейса до реализации, тестирования и подготовки готового продукта.</p>
+        <h2 data-i18n="projects.title">Мои проекты 🚀</h2>
+        <p class="lead-text" data-i18n="projects.lead">Здесь представлены мобильные приложения и веб-интерфейсы, которые я разрабатываю самостоятельно — от идеи и проектирования интерфейса до реализации, тестирования и подготовки готового продукта.</p>
         
+        <!-- Карточка проекта: Podarunok 777 (коммерческий клиентский проект) -->
+        <div class="project-card-custom">
+            <div class="project-header-custom">
+                <span class="project-icon-custom">🎁</span>
+                <h3>Podarunok 777</h3>
+            </div>
+            <span class="project-badge-custom" data-i18n="projects.podarunok.badge">Коммерческий проект для клиента</span>
+            <p data-i18n="projects.podarunok.desc">Интернет-магазин подарков, разработанный для реального клиента. Каталог с категориями и подкатегориями, поиск, избранное, корзина и оформление заказа, личные кабинеты, отзывы с рейтингом и модерацией. Собственная админ-панель для управления товарами, категориями, изображениями, заказами, статьями и информационными страницами. Бэкенд на Supabase, защита формы заказа от спама и полностью адаптивная вёрстка. </p>
+            <p class="project-private-note" data-i18n="projects.podarunok.private">
+              🔒 По просьбе клиента сайт не демонстрируется публично в моём портфолио. В описании проекта указаны реализованные мной функции и выполненная работа.
+            </p>
+            <div class="project-tags-custom">
+                <span>HTML · CSS · </span>
+                <span>JavaScript · </span>
+                <span>Vite · </span>
+                <span>Supabase · </span>
+                <span>Netlify</span>
+            </div>
+        </div>
+
         <!-- Карточка проекта 1 -->
         <div class="project-card-custom">
             <div class="project-header-custom">
                 <span class="project-icon-custom">🤖</span>
                 <h3>FoodCost / CraftCost App</h3>
             </div>
-            <p>Android-приложение для расчёта себестоимости продуктов и крафтовых изделий. Самостоятельно разработал приложение: продумал структуру и интерфейс, реализовал логику расчётов, протестировал приложение и подготовил подписанную релизную сборку. Android Studio · Kotlin / Java · UI/UX</p>
+            <p data-i18n="projects.foodcost.desc">Android-приложение для расчёта себестоимости продуктов и крафтовых изделий. Самостоятельно разработал приложение: продумал структуру и интерфейс, реализовал логику расчётов, протестировал приложение и подготовил подписанную релизную сборку. Android Studio · Kotlin / Java · UI/UX</p>
             <div class="project-tags-custom">
-    <span>Android Studio</span>
-    <span>Java/Kotlin</span>
+    <span>Android Studio · </span>
+    <span>Java/Kotlin · </span>
     <span>UI/UX</span>
 </div>
 
@@ -55,6 +81,7 @@
     target="_blank"
     rel="noopener noreferrer"
     class="btn btn-secondary project-gallery-btn"
+    data-i18n="projects.foodcost.screenshots"
 >
     📱 Посмотреть скриншоты
 </a>
@@ -66,18 +93,18 @@
                 <span class="project-icon-custom">💻</span>
                 <h3>MAX.DEV Portfolio</h3>
             </div>
-            <p>Сайт-портфолио, который вы сейчас просматриваете. Разработан с использованием современных возможностей CSS: glassmorphism, асимметричные скругления, кастомные маски и адаптивная вёрстка. Особое внимание уделено визуальной подаче, плавности интерфейса и корректному отображению на разных размерах экрана. Проект собран с использованием быстрого сборщика Vite.</p>
+            <p data-i18n="projects.portfolio.desc">Сайт-портфолио, который вы сейчас просматриваете. Разработан с использованием современных возможностей CSS: glassmorphism, асимметричные скругления, кастомные маски и адаптивная вёрстка. Особое внимание уделено визуальной подаче, плавности интерфейса и корректному отображению на разных размерах экрана. Проект собран с использованием быстрого сборщика Vite.</p>
             <div class="project-tags-custom">
-                <span>HTML5 / CSS3</span>
-                <span>JavaScript</span>
+                <span>HTML5 / CSS3 · </span>
+                <span>JavaScript · </span>
                 <span>Vite</span>
             </div>
         </div>
 
         <!-- Кнопки навигации -->
         <div class="cta-buttons">
-            <a href="index.html" class="btn btn-secondary">← На главную</a>
-            <a href="contacts.html" class="btn btn-primary">Обсудить проект 💬</a>
+            <a href="index.html" class="btn btn-secondary" data-i18n="projects.back">← На главную</a>
+            <a href="contacts.html" class="btn btn-primary" data-i18n="projects.discuss">Обсудить проект 💬</a>
         </div>
       </div>
     </section>
@@ -87,6 +114,6 @@
   document.querySelectorAll('.panel').forEach((panel) => {
     panel.style.setProperty('backdrop-filter', 'blur(18px)', 'important')
   })
-</script>
+</script>
 </body>
 </html>

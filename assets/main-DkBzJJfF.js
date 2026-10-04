@@ -1,7 +1,7 @@
-/* empty css              */(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=`/max-dev/assets/avatar-5bgIPVnG.jpg`;document.querySelector(`#app`).innerHTML=`
+import{t as e}from"./i18n-Ch9Lx8N6.js";var t=`/max-dev/assets/avatar-5bgIPVnG.jpg`;document.querySelector(`#app`).innerHTML=`
 
   <div class="avatar">
-    <img src="${e}" alt="Портрет Макса">
+    <img src="${t}" alt="Портрет Макса" data-i18n-alt="common.avatarAlt">
   </div>
 
   <div class="badge-mask" aria-hidden="true"></div>
@@ -11,9 +11,13 @@
 
 
 <nav>
-  <a href="/max-dev/index.html" class="active">Главная</a>
-  <a href="/max-dev/projects.html">Проекты</a>
-  <a href="/max-dev/contacts.html">Контакты</a>
+  <a href="/max-dev/index.html" class="active" data-i18n="nav.home">Главная</a>
+  <a href="/max-dev/projects.html" data-i18n="nav.projects">Проекты</a>
+  <a href="/max-dev/contacts.html" data-i18n="nav.contacts">Контакты</a>
+  <div class="lang-switch" role="group" aria-label="Выбор языка" data-i18n-aria-label="lang.label">
+    <button type="button" class="lang-switch-btn" data-lang-btn="ru" aria-pressed="true">RU</button>
+    <button type="button" class="lang-switch-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+  </div>
 </nav>
 
 
@@ -24,9 +28,9 @@
       <div class="main-content-text">
 
 
-    <h2>Привет! Я Макс <span class="wave-emoji">🖐</span></h2>
+    <h2><span data-i18n="home.title">Привет! Я Макс</span> <span class="wave-emoji">🖐</span></h2>
 
-    <p class="lead-text">
+    <p class="lead-text" data-i18n="home.lead">
       Android-разработчик и Web Dev. Создаю современные мобильные приложения,
       сайты и удобные цифровые интерфейсы для предпринимателей, специалистов
       и небольших компаний.
@@ -41,7 +45,7 @@
     </p>
 
     <div class="tech-stack-section">
-      <h3>Мой стек и технологии:</h3>
+      <h3 data-i18n="home.stackTitle">Мой стек и технологии:</h3>
 
       <ul class="skills-list">
         <li>
@@ -56,15 +60,15 @@
 
         <li>
           <span>🛠️</span>
-          <strong>Инструменты:</strong> Git, GitHub, VS Code
+          <strong data-i18n="home.tools">Инструменты:</strong> Git, GitHub, VS Code
         </li>
       </ul>
     </div>
 
     <div class="about-me-section">
-      <h3>Чем я занимаюсь:</h3>
+      <h3 data-i18n="home.aboutTitle">Чем я занимаюсь:</h3>
 
-      <p>
+      <p data-i18n="home.aboutText">
         Создаю современные мобильные приложения и адаптивные веб-интерфейсы —
         от продумывания логики и структуры продукта до реализации и финальной
         полировки.
@@ -78,6 +82,7 @@
       <a
         href="/max-dev/projects.html"
         class="btn btn-primary"
+        data-i18n="home.ctaProjects"
       >
         Посмотреть проекты 🚀
       </a>
@@ -87,6 +92,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn-secondary"
+        data-i18n="home.ctaTelegram"
       >
         Написать в Telegram 💬
       </a>
@@ -97,4 +103,4 @@
 
 
   </main>
-`,document.querySelectorAll(`.panel`).forEach(e=>{e.style.setProperty(`backdrop-filter`,`blur(18px)`,`important`)});
+`,document.querySelectorAll(`.panel`).forEach(e=>{e.style.setProperty(`backdrop-filter`,`blur(18px)`,`important`)}),e();
